@@ -1,0 +1,13 @@
+# macOS system files
+.DS_Store
+
+# Node.js
+node_modules/
+.env
+dist/
+build/
+*.log
+
+# VSCode
+.vscode/
+
