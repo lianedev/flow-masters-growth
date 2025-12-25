@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Phone, Menu, X, Wrench, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,7 +27,8 @@ const Header = () => {
   return (
     <>
       {/* Emergency Top Bar */}
-      <div className="bg-destructive text-destructive-foreground py-2 text-center font-bold text-sm sm:text-base">
+      <motion.div>
+       <div className="bg-destructive text-destructive-foreground py-2 text-center font-bold text-sm sm:text-base">
         <div className="container mx-auto px-4 flex items-center justify-center gap-2">
           <Clock className="w-4 h-4" />
           <span>24/7 Emergency Service Available</span>
@@ -36,20 +38,39 @@ const Header = () => {
           </a>
         </div>
       </div>
+      </motion.div>
+      
 
       {/* Main Header */}
       <header
         className={cn(
           'fixed top-[32px] md:top-[40px] left-0 right-0 z-50 transition-all duration-300',
           isScrolled
-            ? 'bg-primary backdrop-blur-md shadow-md'
+            ? 'bg-primary  shadow-none'
             : 'bg-transparent'
         )}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-16 md:h-20 ">
             {/* Logo */}
-            <div className="flex items-center gap-2">
+            <motion.div
+            className="shadow-none"
+            initial={{
+              x: -500,  // starts 500px above
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,     // drops into natural position
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.5,
+              ease: "easeOut"
+            }}
+            >
+              <div className="flex items-center gap-2">
               <div className=" md:w-11 md:h-11 bg-white rounded-lg flex items-center justify-center">
                 <img className='object-contain w-full h-full' src='/logo.webp'/>
               </div>
@@ -60,9 +81,27 @@ const Header = () => {
                 </p>
               </div>
             </div>
+            </motion.div>
+            
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
+            <motion.div
+            initial={{
+              y: -30,  // starts 500px above
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              y: 0,     // drops into natural position
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.5,
+              ease: "easeOut"
+            }}
+            >
+              <nav className="hidden md:flex items-center gap-8">
               {navigation.map((item) => (
                 <a
                   key={item.name}
@@ -73,9 +112,26 @@ const Header = () => {
                 </a>
               ))}
             </nav>
+            </motion.div>
 
             {/* Desktop CTA */}
-            <div className="hidden lg:flex items-center gap-3">
+           <motion.div
+           initial={{
+              x: 500,  // starts 500px above
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,     // drops into natural position
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.5,
+              ease: "easeOut"
+            }}
+           >
+             <div className="hidden lg:flex items-center gap-3">
               <div className="text-right">
                 <p className="text-white">Call Now</p>
                 <a
@@ -92,6 +148,8 @@ const Header = () => {
               </a>
               
             </div>
+
+           </motion.div>
 
             {/* Mobile Menu Button */}
             <button
@@ -111,7 +169,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white/95 backdrop-blur-md border-t shadow-md">
+          <div className="lg:hidden bg-white/95  border-t shadow-none">
             <nav className="container mx-auto px-4 py-6 space-y-4">
               {navigation.map((item) => (
                 <a

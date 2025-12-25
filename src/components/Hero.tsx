@@ -2,14 +2,15 @@ import React from 'react';
 import { Button } from './ui/button';
 import { Phone, Shield, Clock, Star, ArrowRight } from 'lucide-react';
 import heroImage from '@/assets/hero-plumber.jpg';
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20 md:pt-24">
       {/* Background Image with Overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "" }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('https://images.pexels.com/photos/4551972/pexels-photo-4551972.jpeg')]"
+        
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
       </div>
@@ -22,7 +23,22 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl">
           {/* Trust Badges */}
-          <div className="flex flex-wrap items-center gap-2 md:gap-4 mb-4 md:mb-6">
+          <motion.div className="flex flex-wrap items-center gap-2 md:gap-4 mb-4 md:mb-6"
+          initial={{
+              x: -900,  // starts 500px above
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,     // drops into natural position
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.5,
+              ease: "easeOut"
+            }}
+          >
             <div className="flex items-center gap-1 md:gap-2 glass px-2 md:px-3 py-1 rounded-full">
               <Shield className="w-3 h-3 md:w-4 md:h-4 text-white" />
               <span className="text-white  font-medium">Licensed & Insured</span>
@@ -35,10 +51,25 @@ const Hero = () => {
               <Clock className="w-3 h-3 md:w-4 md:h-4 text-white" />
               <span className="text-white   font-medium">24/7 Emergency</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight animate-slide-up">
+          <motion.h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight "
+          initial={{
+              x: -900,  // starts 500px above
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,     // drops into natural position
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.55,
+              ease: "easeOut"
+            }}
+          >
             Professional
             <span className="block bg-clip-text text-transparent bg-gradient-to-r from-accent-light to-secondary-light">
               Plumbing Services
@@ -46,18 +77,47 @@ const Hero = () => {
             <span className="block text-xl md:text-3xl lg:text-4xl font-medium">
               Serving (city) region for 20 years
             </span>
-          </h1>
+          </motion.h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-6 md:mb-8 max-w-2xl animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <motion.p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-6 md:mb-8 max-w-2xl " 
+          initial={{
+              x: -900,  // starts 500px above
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,     // drops into natural position
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.55,
+              ease: "easeOut"
+            }}
+          >
             Fast, reliable, and affordable plumbing solutions for your home and business. 
             Available 24/7 for emergencies.
-          </p>
+          </motion.p>
 
           {/* CTA Buttons */}
-          <div
-            className="flex flex-col gap-3 md:gap-4 mb-8 md:mb-12 animate-slide-up"
-            style={{ animationDelay: '0.4s' }}>
+          <motion.div
+            className="flex flex-col gap-3 md:gap-4 mb-8 md:mb-12 "
+            initial={{
+              x: -900,  // starts 500px above
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,     // drops into natural position
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.55,
+              ease: "easeOut"
+            }}
+            >
               <a href="tel:+17027103972">
               <Button
               variant="hero"
@@ -71,25 +131,28 @@ const Hero = () => {
             </Button>
             </a>
             
-            <a href="tel:+17027103972">
-              <Button
-                variant="accent"
-                size="lg"
-                type="button"
-                className="group w-fit"
-                aria-label="Get free quote"
-              >
-                <span className=" md:text-base mr-2">Get Free Quote</span>
-                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </a>  
-          </div>
+            
+          </motion.div>
 
 
           {/* Key Features */}
-          <div
-            className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mb-6 animate-slide-up w-fit mx-auto"
-            style={{ animationDelay: '0.6s' }}>
+          <motion.div
+            className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mb-6  w-fit mx-auto"
+            initial={{
+              x: -900,  // starts 500px above
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,     // drops into natural position
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.55,
+              ease: "easeOut"
+            }}
+            >
             {/* Card 1 */}
             <div className="glass p-4 md:p-6 rounded-lg w-fit transition-transform hover:scale-[1.02]">
               <div className="flex items-center gap-4">
@@ -140,7 +203,7 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

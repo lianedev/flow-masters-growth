@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Button } from './ui/button';
 import { 
   Shield, 
@@ -13,6 +13,9 @@ import {
 import bathroomImage from '@/assets/bathroom-showcase.jpg';
 import toolsImage from '@/assets/plumbing-tools.jpg';
 import Contact from './Contact';
+import { gsap } from "gsap";
+import React, { useEffect, useRef } from "react";
+
 
 const About = () => {
   const teamMembers = [
@@ -31,6 +34,8 @@ const About = () => {
     
   ];
 
+  
+
   const certifications = [
     'Las Vegas License',
     'Backflow Prevention Certified',
@@ -44,6 +49,8 @@ const About = () => {
     { icon: Star, number: '4.9/5', label: 'Customer Rating' },
     { icon: Award, number: '100%', label: 'Satisfaction Rate' }
   ];
+
+  
 
   return (
     <section id="about" className="py-20 bg-background">

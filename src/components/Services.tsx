@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button } from './ui/button';
-import { 
-  Wrench, 
-  Droplets, 
-  Thermometer, 
-  Zap, 
-  Home, 
+import {
+  Wrench,
+  Droplets,
+  Thermometer,
+  Zap,
+  Home,
   Building,
   Clock,
   Shield,
@@ -74,17 +74,17 @@ const Services = () => {
             Our Plumbing Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From emergency repairs to complete installations, we provide comprehensive 
+            From emergency repairs to complete installations, we provide comprehensive
             plumbing solutions for residential and commercial properties.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 animate-slide-up">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <div 
+              <div
                 key={index}
                 className="group bg-white rounded-xl p-6 shadow-soft hover:shadow-large transition-all duration-300 hover:-translate-y-2"
               >
@@ -128,7 +128,7 @@ const Services = () => {
                       Learn More
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
-                  </a> 
+                  </a>
                 </div>
               </div>
             );
@@ -179,7 +179,7 @@ const Services = () => {
                 <Button variant="accent" size="lg" className="w-full">
                   Get Service Quote
                 </Button>
-              </a> 
+              </a>
             </div>
           </div>
         </div>
