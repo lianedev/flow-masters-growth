@@ -9,7 +9,7 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: "" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
       </div>
@@ -44,7 +44,7 @@ const Hero = () => {
               Plumbing Services
             </span>
             <span className="block text-xl md:text-3xl lg:text-4xl font-medium">
-              Serving Las Vegas region for 20 years
+              Serving (city) region for 20 years
             </span>
           </h1>
 
@@ -67,7 +67,7 @@ const Hero = () => {
               aria-label="Call now"
             >
               <Phone className="w-4 h-4 md:w-5 md:h-5 group-hover:animate-bounce" />
-              <span className=" md:text-base ml-2">Call Now:  (702) 710-3972</span>
+              <span className=" md:text-base ml-2">Call Now:  (702) XXX-XXX</span>
             </Button>
             </a>
             

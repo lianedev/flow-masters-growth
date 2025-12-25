@@ -32,7 +32,7 @@ const Header = () => {
           <span>24/7 Emergency Service Available</span>
           <Phone className="w-4 h-4" />
           <a href="tel:+17027103972" className="font-bold hover:underline">
-             (702) 710-3972 
+             (702) XXX-XXX
           </a>
         </div>
       </div>
@@ -54,9 +54,9 @@ const Header = () => {
                 <img className='object-contain w-full h-full' src='/logo.webp'/>
               </div>
               <div>
-                <h1 className="text-lg md:text-xl font-bold text-white">Adaven Plumbing</h1>
+                <h1 className="text-lg md:text-xl font-bold text-white">(B-Name)</h1>
                 <p className="text-xs sm:text-sm text-muted-foreground hidden sm:block">
-                  Las Vegas
+                  (City)
                 </p>
               </div>
             </div>
@@ -82,7 +82,7 @@ const Header = () => {
                   href="tel:+17027103972"
                   className="font-bold text-muted-foreground"
                 >
-                 (702) 710-3972
+                 (702) XXX-XXX
                 </a>
               </div>
               <a href="tel:+1707103972">
@@ -128,7 +128,7 @@ const Header = () => {
                   href="tel:+17027103972"
                   className="block  text-primary font-semibold"
                 >
-                  Emergency: (702) 710 3972
+                  Emergency: (702) XXX-XXX
                 </a>
                 <Button
                   variant="accent"

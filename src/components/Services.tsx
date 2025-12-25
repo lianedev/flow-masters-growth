@@ -140,23 +140,23 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-semibold text-primary mb-4">
-                Service Areas in Las Vegas region
+                Service Areas (City) region
               </h3>
               <p className="text-base text-muted-foreground mb-6">
                 We proudly serve Houston and surrounding areas with fast, reliable plumbing services.
               </p>
               <div className="grid grid-cols-2 gap-4 text-base">
                 <div className="space-y-2">
-                  <p>• Las Vegas</p>
-                  <p>• Paradise</p>
-                  <p>• Henderson</p>
-                  <p>• Spring Valley</p>
+                  <p>• Area</p>
+                  <p>• Area</p>
+                  <p>• Area</p>
+                  <p>• Area</p>
                 </div>
                 <div className="space-y-2">
-                  <p>• Sunrise Manor</p>
-                  <p>• Summerlin</p>
-                  <p>• Winchester</p>
-                  <p>• North Las Vegas</p>
+                  <p>• Area</p>
+                  <p>• Area</p>
+                  <p>• Area</p>
+                  <p>• Area</p>
                 </div>
               </div>
             </div>
@@ -172,7 +172,7 @@ const Services = () => {
                 <Shield className="w-8 h-8 text-secondary" />
                 <div>
                   <h4 className="text-lg font-semibold">Licensed & Insured</h4>
-                  <p className="text-base text-muted-foreground"> NV.CL #0077979</p>
+                  <p className="text-base text-muted-foreground"> (license)</p>
                 </div>
               </div>
               <a href="tel:+17027103972">
